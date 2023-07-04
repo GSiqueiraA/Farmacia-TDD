@@ -1,4 +1,4 @@
-import { IUserRepo } from "../repos";
+import { IUserRepo } from "../repos/userRepo";
 import { MockUserRepo } from "../repos/mock/mockUserRepo";
 
   describe('createUser', () => {
