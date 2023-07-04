@@ -3,6 +3,9 @@
  * @desc Responsável por buscar usuários no banco de dados.
  **/
 export interface IUserRepo {          // Exportado
+  id: string;
+  login: string;
+  password: string;
   getUsers (): Promise<User[]>
 }
 
