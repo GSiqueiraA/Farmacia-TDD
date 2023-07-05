@@ -1,6 +1,6 @@
 import { IUserRepo } from "../repos/userRepo";
 import { MockUserRepo } from "../repos/mock/mockUserRepo";
-import {Evento} from '../repos/userRepo';
+import {Evento} from '../repos/userRepos';
 
   describe('createUser', () => {
     test('deve criar um novo usuario', async () => {
