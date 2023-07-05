@@ -1,4 +1,4 @@
-import {Evento} from '../repos/userRepo.ts';
+import {Evento} from '../repos/userRepo';
 
 export interface userRepos {
     createUser(user: user): Promise<user>;
