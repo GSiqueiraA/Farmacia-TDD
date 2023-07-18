@@ -16,7 +16,10 @@ class UserController {
   async handleGetUsers(req, res): Promise<void> {
     const users = await this.userRepo.getUsers();
     return res.status(200).json({ users });
+     } else {
+        res.status(400).json({ error: 'Login invalido' });
+
     } catch (error) {
       res.status(500).json({ error: 'Erro' });
-    }
+      }
   }
