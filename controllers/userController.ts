@@ -1,4 +1,5 @@
-import { IUserRepo } from "../repos"; // Muito Melhor!
+import { IUserRepo } from "../repos"; 
+import { Request, Response } from 'express';
 
 /**
  * @class UserController
@@ -6,14 +7,16 @@ import { IUserRepo } from "../repos"; // Muito Melhor!
  **/
 
 class UserController {
-  private userRepo: IUserRepo; // Mudados Aqui
+  private userRepo: IUserRepo; 
 
   constructor(userRepo: IUserRepo) {
-    this.userRepo = userRepo; // E Aqui Também
+    this.userRepo = userRepo;
   }
 
   async handleGetUsers(req, res): Promise<void> {
     const users = await this.userRepo.getUsers();
     return res.status(200).json({ users });
+    } catch (error) {
+      res.status(500).json({ error: 'Erro' });
+    }
   }
-}
