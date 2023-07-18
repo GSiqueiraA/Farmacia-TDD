@@ -1,6 +1,8 @@
 import { IUserRepo } from "../repos/userRepo";
 import { MockUserRepo } from "../repos/mock/mockUserRepo";
 import {Evento} from '../repos/userRepos';
+import { Response } from "express";
+
 
   describe('createUser', () => {
     test('deve criar um novo usuario', async () => {
@@ -9,3 +11,4 @@ import {Evento} from '../repos/userRepos';
       expect(newUser).toEqual(createUser);
     });
 
+  }
