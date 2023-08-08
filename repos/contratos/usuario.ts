@@ -1,9 +1,9 @@
 import {usuario} from '../../entidades/usuario';
 
-export interface userRepos {
-    createUser(user: user): Promise<user>;
-    obterUser(): Promise<user[]>;
-    obterLoginPorId(id: string): Promise<user | null>;
-    atualizarUsuario(evento: Evento): Promise<user>;
+export interface usuarioRepos {
+    criarUsuario(usuario: usuario): Promise<usuario>;
+    obterUsuario(): Promise<usuario[]>;
+    obterLoginPorId(id: string): Promise<usuario | null>;
+    atualizarUsuario(evento: Evento): Promise<usuario>;
     excluirUsuario(id: string): Promise<boolean>;
 }
