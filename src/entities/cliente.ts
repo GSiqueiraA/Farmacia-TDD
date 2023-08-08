@@ -1,5 +1,5 @@
 export interface cliente {
-    id: number;
+    id: string;
     login: string;
     password: string;
 }
