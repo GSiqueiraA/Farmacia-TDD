@@ -1,4 +1,4 @@
-import {usuario} from '../../entidades/usuario.ts';
+import {usuario} from '../../entidades/usuario';
 
 export interface userRepos {
     createUser(user: user): Promise<user>;
